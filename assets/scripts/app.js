@@ -15,7 +15,7 @@ function constroiCard(category, score, icon) {
     listaConstruida.className = `grade ${category.toLowerCase()}`;
     listaConstruida.innerHTML = 
                     `
-                    <p> <img src=${icon} alt="${category}"> ${category}</p>
+                    <p> <img src=${icon} alt=""> ${category}</p>
                     <p> <span class="graded">${score}</span> <span class="grade-total">/ 100</span></p>
                         
                     `
