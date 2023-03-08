@@ -29,7 +29,7 @@ async function listaData() {
         listaApi.forEach(elemento => reaction.appendChild(
             constroiCard(elemento.category, elemento.score, elemento.icon)));
     } catch {
-        reaction.innerHTML = `<h2 class='mensagem__titulo'>Não foi possível carregar a lista de vídeos.`;
+        reaction.innerHTML = `<h2 class='mensagem__titulo'>It was not possible to load data from DataBase.`;
     }
 }
 
