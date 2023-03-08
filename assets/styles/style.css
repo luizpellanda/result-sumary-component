@@ -6,8 +6,14 @@
     font-size: 18px;
 }
 
+:root {
+    --shadow: 0 3px 5px 0 hsl(0, 0%, 0%, 0.5);
+    --section-padding: 0 3rem;
+    --section-padding-mobile: 1rem 2rem;
+}
+
 html {
-    background-color: hsl(221, 100%, 96%);
+    background-color: hsl(221, 100%, 96%);    
 }
 
 section {
@@ -27,9 +33,9 @@ section {
     flex-direction: column;
     background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 100%);
     border-radius: 32px;
-    box-shadow: 0 3px 5px 0 hsl(0, 0%, 0%, 0.5);
+    box-shadow: var(--shadow);
     text-align: center;
-    padding: 0 3rem;
+    padding: var(--section-padding);
     z-index: 999999;
     position: relative;
     left: 70px;
@@ -45,7 +51,7 @@ section {
     height: 11rem;
     width: 11rem;
     text-align: center;
-    background: linear-gradient(0deg, rgba(120,87,255,0) 0%, rgba(36,33,202,0.5) 100%);
+    background: linear-gradient(0deg, rgba(120,87,255,0) 0%, rgba(36,33,202,1) 100%);
     border-radius: 100px;
     padding: 2rem 2rem;   
     display: flex; 
@@ -89,7 +95,7 @@ section {
     flex-direction: column;
     background: white;
     border-radius: 32px;
-    box-shadow: 0 3px 5px 0 hsl(0, 0%, 0%, 0.5);
+    box-shadow: var(--shadow);
     text-align: left;
     padding-left: 6rem;
     padding-right: 2rem;
@@ -106,23 +112,28 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem 0;
+    margin: 0.7rem 0;
     background-color: blue;
     height: 3rem;
     width: 100%;
     border-radius: 10px;
 }
 
-.grade a {
+.grade p {
     text-decoration: none;
     padding: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor:default;
 }
 
 .reaction {
     background: hsla(0, 100%, 67%, .08);
 }
 
-.reaction a {
+.reaction p {
     color: hsla(0, 100%, 67%, 1);
     font-weight: 500;
 }
@@ -131,7 +142,7 @@ section {
     background: hsla(40, 100%, 56%, .08);
 }
 
-.memory a {
+.memory p {
     color: hsla(40, 100%, 56%, 1);
     font-weight: 500;
 }
@@ -140,7 +151,7 @@ section {
     background: hsla(166, 100%, 37%, .08);
 }
 
-.verbal a {
+.verbal p {
     color: hsla(166, 100%, 37%, 1);
     font-weight: 500;
 }
@@ -149,7 +160,7 @@ section {
     background: hsla(234, 85%, 45%, .08);
 }
 
-.visual a {
+.visual p {
     color: hsla(234, 85%, 45%, 1);
     font-weight: 500;
 }
@@ -162,6 +173,76 @@ section {
 .grade-total {
     color: hsla(223, 30%, 27%, 0.5);
     font-weight: 700;
+}
+
+/* Button */
+
+button {
+    background: hsla(223, 30%, 27%, 1);
+    border: none;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 1.5rem 0;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 100%);
+}
+
+@media screen and (max-width: 750px) {
+    html {
+        background-color: white;
+    }
+
+    section {
+        flex-direction: column;
+        height: 125vh;
+    }
+
+    .result {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        left: 0;
+        top: 10px;
+        position: static;
+        border-radius: 0 0 32px 32px;
+        padding: var(--section-padding-mobile);
+        box-shadow: none;
+    }
+
+    .result-text h2 {
+        margin-bottom: 0.5rem;
+    }
+
+    .your-result {
+        margin: 1rem 0;
+    }
+
+    .summary {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        position: static;
+        padding: var(--section-padding-mobile);
+        border-radius: 0
+    }
+
+    .summary h3 {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    section {
+        height: 142vh;
+    }
 }
 
 
