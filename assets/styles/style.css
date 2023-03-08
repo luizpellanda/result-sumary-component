@@ -16,7 +16,7 @@ html {
     background-color: hsl(221, 100%, 96%);    
 }
 
-section {
+main {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -101,7 +101,7 @@ section {
     padding-right: 2rem;
 }
 
-.summary h3 {
+.summary h1 {
     font-size: 1.3rem;
     margin: 2rem 0;
     color: hsla(223, 30%, 27%, 1);
